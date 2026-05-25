@@ -69,9 +69,10 @@ server.tool(
 - Package manager: bun ONLY. Never use npm, npx, yarn or pnpm.
 - Terminal: Always use Git Bash exclusively for executing commands. Never use PowerShell or CMD.
 - All code and comments must be in English.
-- All plans, tasks and communication with Marcela must be in Spanish.
+- All plans, tasks and communication with Marcela (she prefers to be called Marce) must be in Spanish.
 - Always plan before executing.
-- Never modify protected files without explicit confirmation.`
+- Never modify protected files without explicit confirmation.
+- Validation: Never consider a task finished without successfully running "bunx tsc --noEmit" and "bun run build".`
       }]
     };
   }
