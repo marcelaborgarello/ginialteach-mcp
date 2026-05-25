@@ -67,6 +67,7 @@ server.tool(
         type: "text",
         text: `GINIALTECH conventions:
 - Package manager: bun ONLY. Never use npm, npx, yarn or pnpm.
+- Terminal: Always use Git Bash exclusively for executing commands. Never use PowerShell or CMD.
 - All code and comments must be in English.
 - All plans, tasks and communication with Marcela must be in Spanish.
 - Always plan before executing.
