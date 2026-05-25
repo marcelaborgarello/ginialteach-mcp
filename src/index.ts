@@ -72,6 +72,7 @@ server.tool(
 - All plans, tasks and communication with Marcela (she prefers to be called Marce) must be in Spanish.
 - Always plan before executing.
 - Never modify protected files without explicit confirmation.
+- AI_CONTEXT: It is mandatory to read the AI_CONTEXT.md file if it exists in the project.
 - Validation: Never consider a task finished without successfully running "bunx tsc --noEmit" and "bun run build".`
       }]
     };
