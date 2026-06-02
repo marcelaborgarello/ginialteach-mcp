@@ -12,12 +12,13 @@ const server = new McpServer({
 // Tool: get project context
 server.tool(
   "get_project_context",
-  "Reads AI_CONTEXT.md from the current project and returns its contents",
+  "Reads AI_CONTEXT.md from the current project and returns its contents (checks root, docs/ and doc/)",
   { project_path: z.string().describe("Absolute path to the project root") },
   async ({ project_path }) => {
     const paths = [
       join(project_path, "AI_CONTEXT.md"),
-      join(project_path, "docs", "AI_CONTEXT.md")
+      join(project_path, "docs", "AI_CONTEXT.md"),
+      join(project_path, "doc", "AI_CONTEXT.md")
     ];
 
     for (const contextPath of paths) {
@@ -72,7 +73,7 @@ server.tool(
 - All plans, tasks and communication with Marcela (she prefers to be called Marce) must be in Spanish.
 - Always plan before executing.
 - Never modify protected files without explicit confirmation.
-- AI_CONTEXT: It is mandatory to read the AI_CONTEXT.md file if it exists in the project.
+- AI_CONTEXT: It is mandatory to read the AI_CONTEXT.md file if it exists in the project (checks root or docs/).
 - Validation: Never consider a task finished without successfully running "bunx tsc --noEmit" and "bun run build".`
       }]
     };
